@@ -1,0 +1,7 @@
+package vinicius.web.bean;
+
+import vinicius.web.interfaces.NotasI;
+
+public class Notas implements NotasI{
+
+}

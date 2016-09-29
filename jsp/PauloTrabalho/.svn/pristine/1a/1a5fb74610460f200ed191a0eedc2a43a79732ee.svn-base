@@ -1,0 +1,9 @@
+package vinicius.web.bean;
+
+import vinicius.web.interfaces.DataI;
+
+public class Data implements DataI {
+	
+	
+	
+	}

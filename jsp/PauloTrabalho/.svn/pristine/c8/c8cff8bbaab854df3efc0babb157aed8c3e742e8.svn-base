@@ -1,0 +1,5 @@
+package vinicius.web.interfaces;
+
+public interface DataI {
+
+}

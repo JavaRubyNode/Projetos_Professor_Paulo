@@ -1,0 +1,81 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Conversão de temperatura</title>
+</head>
+
+
+
+<% 
+
+String nova= (String)((request.getAttribute("mensagem") == null ? "" : request.getAttribute("mensagem")));
+
+%>
+
+<!-- --------------------------- Corpo --------------------------------------  -->
+<center>
+<body background="pictures/tem.jpeg">
+
+<form action="resultadoTemperatura.jsp" method="post" >
+
+<h4>Como quer converter?</h4>
+<select name  ="conversor">
+<option value ="0">Selecione:</option>
+<option value ="1">Fahrenheit para Celsus</option>
+<option value ="2">Celsus para Fahrenheit</option>
+<option value ="3">Kelvin para Celsus</option>
+<option value ="4">Celsus para Kelvin</option>
+<option value ="5">Fahrenheit para Kelvin</option>
+<option value ="6">Kelvin para Fahrenheit</option>
+
+
+</select>
+<br/>
+<br/>
+<table>
+<tr>Informe um valor:</tr>
+<td> <input type = "text" name ="valor"></td>
+
+</table>
+
+<br/>
+<strong>Reposta:</strong>
+ 
+<br />
+<br/>
+
+<b>
+
+<font color="bue">
+
+<textarea rows="10" cols="50" name="mensagem" >
+  <%=nova%>  
+  
+</textarea>
+
+</font>
+</b>
+<br />
+<br/>
+
+</form>
+
+<table>
+<td> <input type="submit" name="" value="Mostar calculo"></td>
+
+<td>
+
+<form action="index.jsp" method="post">
+<input type="submit" name="" value="Voltar para Página inical">
+</form> 
+</td>
+</table>
+
+</body>
+</center>
+<!-- -----------------------Fim do Corpo----------------------------------------->
+</html>

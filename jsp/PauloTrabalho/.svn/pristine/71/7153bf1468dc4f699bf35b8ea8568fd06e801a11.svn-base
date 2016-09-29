@@ -1,0 +1,139 @@
+package vinicius.web.bean;
+
+import java.io.Serializable;
+
+import vinicius.web.interfaces.AlunoI;
+
+public class Aluno extends Pessoa implements AlunoI, Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private double nota1;
+	private double nota2;
+	private double media;
+	
+	
+	
+	
+	
+	//_______________________________________________________________
+	
+	public Aluno() {
+		super();
+	}//_______________________________________________________________
+	
+	
+	//_______________________________________________________________
+	
+	public Aluno(double nota1, double nota2, double media) {
+		super();
+		this.nota1 = nota1;
+		this.nota2 = nota2;
+		this.media = media;
+	}//_______________________________________________________________
+	
+	
+	//_______________________________________________________________
+	
+	public double getNota1() {
+		return nota1;
+	}//_______________________________________________________________
+	
+	
+	//_______________________________________________________________
+	
+	public void setNota1(double nota1) {
+		this.nota1 = nota1;
+	}//_______________________________________________________________
+	
+	
+	//_______________________________________________________________
+	
+	public double getNota2() {
+		return nota2;
+	}//_______________________________________________________________
+	
+	
+	//_______________________________________________________________
+	
+	public void setNota2(double nota2) {
+	
+		this.nota2 = nota2;
+	}//_______________________________________________________________
+	
+	
+	//_______________________________________________________________
+	
+	public double getMedia() {
+		
+		return media;
+	}//_______________________________________________________________
+	
+	
+	//_______________________________________________________________
+	
+	public void setMedia(double media) {
+		this.media = media;
+	}//_______________________________________________________________
+	
+	
+	//_______________________________________________________________
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		long temp;
+		temp = Double.doubleToLongBits(media);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(nota1);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(nota2);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
+	}//_______________________________________________________________
+	
+	
+	
+	//_______________________________________________________________
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		if (Double.doubleToLongBits(media) != Double
+				.doubleToLongBits(other.media))
+			return false;
+		if (Double.doubleToLongBits(nota1) != Double
+				.doubleToLongBits(other.nota1))
+			return false;
+		if (Double.doubleToLongBits(nota2) != Double
+				.doubleToLongBits(other.nota2))
+			return false;
+		return true;
+	}//_______________________________________________________________
+	
+	
+	//_______________________________________________________________
+	
+	@Override
+	public String pegarDados(String nome1, String anoNascimento1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public double calcularMedia(String notaN1, String N2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}//_______________________________________________________________
+	
+	
+	
+	
+}

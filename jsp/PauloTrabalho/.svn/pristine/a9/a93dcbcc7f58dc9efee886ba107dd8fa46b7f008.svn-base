@@ -1,0 +1,12 @@
+package vinicius.web.interfaces;
+
+import java.util.Date;
+
+public interface PessoaI {
+
+	public Date calcularIdade(String data1);
+	
+	
+	
+	
+}

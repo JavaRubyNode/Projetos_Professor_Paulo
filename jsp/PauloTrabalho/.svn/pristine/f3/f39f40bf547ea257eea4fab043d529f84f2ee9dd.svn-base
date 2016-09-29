@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<%
+
+ String nova= String.valueOf((request.getAttribute("mensagem") == null ? "" : request.getAttribute("mensagem")));
+
+
+
+%>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Conversão de temperatura</title>
+</head>
+<body background="pictures/tem.jpg">
+<form action="resultadoTemperatura.jsp" method="post" >
+
+<h4>Como quer converter?</h4>
+<select name  ="conversor">
+<option value ="0">Selecione:</option>
+<option value ="1">Fahrenheit para Celsus</option>
+<option value ="2">Celsus para Fahrenheit</option>
+<option value ="3">Kelvin para Celsus</option>
+<option value ="4">Celsus para Kelvin</option>
+<option value ="5">Fahrenheit para Kelvin</option>
+<option value ="6">Kelvin para Fahrenheit</option>
+
+
+</select><br/>
+<br/>
+Informe um valor: <input type = "text" name ="valor"><br/>
+<br/>
+<input type="submit" name="" value="Mostar calculo">
+
+
+
+
+
+<br/>
+<br/>
+Reposta: <br /><br/><textarea rows="15" cols="45" name="mensagem" ><%=nova%></textarea><br />
+<br/>
+
+</form>
+</body>
+</html>

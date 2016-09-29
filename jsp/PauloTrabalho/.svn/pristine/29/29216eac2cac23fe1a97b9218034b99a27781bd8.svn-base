@@ -1,0 +1,12 @@
+package vinicius.web.interfaces;
+
+public interface AlunoI {
+
+	public String pegarDados(String nome1, String anoNascimento1);
+	public double calcularMedia(String notaN1, String N2);
+	
+	
+	
+	
+	
+}

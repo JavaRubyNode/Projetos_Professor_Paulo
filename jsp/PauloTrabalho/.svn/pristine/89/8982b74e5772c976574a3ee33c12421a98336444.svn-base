@@ -1,0 +1,37 @@
+u<%@page import="java.util.Date"%>
+<%@page import="vinicius.web.interfaces.DataI"%>
+<%@page import="vinicius.web.bean.Data"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<h4> Data de hoje: <% 
+
+Date b = new Date();
+DataI a = new Data();
+out.println(a.mostrarData(b));
+
+%> </h4>
+<body>
+<form action="resultadoDados.jsp" method="post">
+Nome: <input type="text" name="nome"><br />
+<br />Data de Nascimento:<br /><br />
+Dia: <input type="text" name="dia" maxlength="2" size="2"> 
+Mês: <input type="text" name="mes" maxlength="2" size="2"> 
+Ano: <input type="text" name="ano" maxlength="4" size="4"><br /><br />
+<br /><input type="submit" name="enviar" value="Enviar"><br/><br/>
+
+</form>
+<br/>
+<form action="index.jsp" method="post">
+
+<input type="submit" name=" voltar" value ="Voltar para a Pagina prinicpal">
+
+</form>
+
+</body>
+</html>
